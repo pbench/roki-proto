@@ -210,7 +210,7 @@ message Journey {
   required Timestamp arrival_time = 2;
   required Duration departure_fallback = 3;
   required Duration arrival_fallback = 4;
-  repeated Leg Legs = 5;
+  repeated Leg legs = 5;
   repeated Transfer transfers = 6;
 }
 
