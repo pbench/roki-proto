@@ -2,8 +2,8 @@ syntax = "proto2";
 package roki;
 
 message RangeRequest {
-  required Fallbacks from = 1;
-  required Fallbacks to = 2;
+  required Fallbacks departure = 1;
+  required Fallbacks arrival = 2;
 
   required Timestamp datetime = 3;
 
@@ -21,8 +21,8 @@ message RangeRequest {
 
 
 message JourneyRequest {
-  required Fallbacks from = 1;
-  required Fallbacks to = 2;
+  required Fallbacks departure = 1;
+  required Fallbacks arrival = 2;
 
   required Timestamp datetime = 3;
 
