@@ -17,6 +17,8 @@ message RangeRequest {
 
   optional Duration transfer_min_wait_duration = 11;
 
+  optional Duration max_duration_from_requested_datetime = 12;
+
 }
 
 
@@ -36,6 +38,8 @@ message JourneyRequest {
   optional Duration leg_time_penalty = 10;
   optional Duration leg_walking_penalty = 11;
   optional Duration transfer_min_wait_duration = 12;
+
+  optional Duration max_duration_from_requested_datetime = 13;
 
 }
 
