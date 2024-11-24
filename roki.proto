@@ -228,6 +228,11 @@ message Duration {
 }
 
 
+message Delay {
+  required int32 seconds = 1;
+}
+
+
 message Transfer {
   required Duration walking = 1;
   required Duration wait = 2;
@@ -257,6 +262,12 @@ message StopTime {
   required bool can_board = 4;
   required bool can_debark = 5;
   optional string stop_headsign = 6;
+  // delay from TripUpdate on this trip, if any
+  // only appears when realtime_level = Realtime
+  optional Delay board_delay = 7;
+  // delay from TripUpdate on this trip, if any
+  // only appears when realtime_level = Realtime
+  optional Delay debark_delay = 8;
 }
 
 message TripUpdate {
