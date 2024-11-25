@@ -274,7 +274,14 @@ message TripUpdate {
   required string feed_name = 1;
   required Timestamp feed_timestamp = 2;
   required string trip_update_id = 3;
-  optional Timestamp trip_update_timestamp = 4;
+  required TripUpdateType update_type = 4;
+  optional Timestamp trip_update_timestamp = 5;
+}
+
+enum TripUpdateType {
+  DELETED = 1;
+  MODIFIED = 2;
+  ADDED = 3;
 }
 
 message ServiceAlert {
